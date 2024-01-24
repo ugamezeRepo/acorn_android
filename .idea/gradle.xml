@@ -22,7 +22,7 @@
             <option value="$PROJECT_DIR$/step04view" />
             <option value="$PROJECT_DIR$/step05listview" />
             <option value="$PROJECT_DIR$/step06customlistview" />
-            <option value="$PROJECT_DIR$/tmpactivity" />
+            <option value="$PROJECT_DIR$/step07fragment" />
           </set>
         </option>
       </GradleProjectSettings>
