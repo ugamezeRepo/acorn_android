@@ -24,7 +24,10 @@
             <option value="$PROJECT_DIR$/step06customlistview" />
             <option value="$PROJECT_DIR$/step07fragment" />
             <option value="$PROJECT_DIR$/step07fragment2" />
+            <option value="$PROJECT_DIR$/step08example" />
+            <option value="$PROJECT_DIR$/step08galleryexample" />
             <option value="$PROJECT_DIR$/step08httprequest" />
+            <option value="$PROJECT_DIR$/step08httprequest2" />
           </set>
         </option>
       </GradleProjectSettings>
