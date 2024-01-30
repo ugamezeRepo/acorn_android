@@ -64,8 +64,8 @@ class MainActivity : AppCompatActivity() {
                     conn.useCaches = false // 캐시 사용 여부
 
                     // 응답 코드를 읽어온다.
-                    val responeseCode: Int = conn.responseCode;
-                    if (responeseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
+                    val responseCode: Int = conn.responseCode;
+                    if (responseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
                         // 문자열을 읽어들일 수 있는 객체의 참조값 얻어오기
                         val br = BufferedReader(InputStreamReader(conn.inputStream))
                         // 반복문 돌면서

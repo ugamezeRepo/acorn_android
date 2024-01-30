@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     lateinit var adapter: GalleryAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // 화면 구성 (UI)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
     // json 문자열을 파싱해서 ListView에 정보 출력
     fun printToListView(json: String) {
+        // json은 [] 형식의 문자열이므로 JSONArray()
         val arr = JSONArray(json)
 
         // 반복문 돌면서
@@ -95,8 +97,8 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                     conn.useCaches = false // 캐시 사용 여부
 
                     // 응답 코드를 읽어온다.
-                    val responeseCode: Int = conn.responseCode;
-                    if (responeseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
+                    val responseCode: Int = conn.responseCode;
+                    if (responseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
                         // 문자열을 읽어들일 수 있는 객체의 참조값 얻어오기
                         val br = BufferedReader(InputStreamReader(conn.inputStream))
                         // 반복문 돌면서

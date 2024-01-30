@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                     conn.setUseCaches(false); // 캐시 사용 여부
 
                     // 응답 코드를 읽어온다.
-                    int responeseCode = conn.getResponseCode();
-                    if (responeseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
+                    int responseCode = conn.getResponseCode();
+                    if (responseCode == HttpURLConnection.HTTP_OK) { // 정상 응답이라면 (200)
                         // 문자열을 읽어들일 수 있는 객체의 참조값 얻어오기
                         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                         // 반복문 돌면서
