@@ -2,17 +2,19 @@
 
     <PreferenceCategory app:title="@string/messages_header">
 
+        <!-- app:title="@string/signature_title" -->
         <EditTextPreference
             app:key="signature"
-            app:title="@string/signature_title"
+            app:title="서명하세요"
             app:useSimpleSummaryProvider="true" />
 
+        <!-- app:title="@string/reply_title" -->
         <ListPreference
             app:defaultValue="reply"
             app:entries="@array/reply_entries"
             app:entryValues="@array/reply_values"
             app:key="reply"
-            app:title="@string/reply_title"
+            app:title="기본 답장 방법을 선택하세요"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
@@ -23,6 +25,7 @@
             app:key="sync"
             app:title="@string/sync_title" />
 
+        <!-- sync가 true일 때만 조작할 수 있는 switch -->
         <SwitchPreferenceCompat
             app:dependency="sync"
             app:key="attachment"

@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 /*
     App 에서 문자열을 영구 저장하는 방법 (영구 저장이란 앱을 종료하고 다시 시작해도 불러올수 있는 문자열 )
@@ -40,6 +41,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 버튼에 리스너 등록
         saveBtn.setOnClickListener(this);
         readBtn.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        
+        // default SharedPreferences 객체 얻어내기
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        String signature = pref.getString("signature", "");
+        String reply = pref.getString("reply", "");
+        boolean sync = pref.getBoolean("sync", false);
+        boolean attachment = sync && pref.getBoolean("attachment", false);
     }
 
     @Override
